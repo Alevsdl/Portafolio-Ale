@@ -39,14 +39,20 @@
   padding: 15%
   
 }
+.columna1{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  place-items: center;
+  align-content: center;
+  
+}
 .menu {
   height: 100%; 
   z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   padding-left: 20%;
-  
 }
 
 
@@ -63,9 +69,15 @@
   font-size: 1.9rem; 
 }
 
-.box {
-  padding: 0;
-  
+.items{
+  color: rgb(29, 29, 29);
+  font-size: 1.9rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.items:hover{
+opacity: 0.5;
 }
 
 
@@ -79,6 +91,7 @@
 }
 .boxi{
   padding: 15px;
+
 }
 .fa{
   font-size: 2rem;
@@ -86,3 +99,4 @@
 .fa:hover {
 color: #FF7396;
 }
+
