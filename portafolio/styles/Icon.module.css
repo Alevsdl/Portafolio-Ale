@@ -1,0 +1,79 @@
+/* .btn {
+  height: 100px;
+  width: 60px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+  font-size: 2.5rem;
+  color: #666;
+  text-decoration: none;
+}
+.btn:hover {
+  background: radial-gradient(circle, #0ff 0%, #d8bfd8 60%);
+  color: rgba(102, 102, 102, 0.5);
+  animation: colorchange 3s linear infinite;
+}
+.btn:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+}
+
+@keyframes colorchange {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+ */
+div.circle {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+}
+div.circle:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100px;
+  height: 100px;
+  content: " ";
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  border-radius: 100px;
+  filter: blur(7px);
+}
+
+div.circle:before {
+  box-shadow: 8px 8px 20px #a9a8b7, -8px -8px 20px #fff;
+}
+
+div.circle:hover:before {
+  box-shadow: 8px 8px 20px #a9a8b7, -8px -8px 20px #fff,
+    inset -8px -8px 20px #fff, inset 8px 8px 20px #a9a8b7;
+}
+
+div.circle:hover:before {
+  transition: 0.3s ease-in;
+  transform: scale(1.05);
+}
+div.circle p {
+  position: relative;
+  z-index: 5;
+  user-select: none;
+  cursor: pointer;
+}

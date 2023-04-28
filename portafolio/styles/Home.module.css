@@ -6,7 +6,7 @@
   overflow: hidden;
   position: relative;
 }
-.marco{
+.marco {
   border: 2px solid black;
   width: calc(100% - 60px);
   height: calc(100% - 60px);
@@ -31,72 +31,92 @@
 }
 
 .content {
-  height: 100%; 
+  height: 100%;
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15%
-  
+  padding: 15%;
 }
-.columna1{
+.columna1 {
   height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   place-items: center;
   align-content: center;
-  
 }
 .menu {
-  height: 100%; 
+  height: 100%;
   z-index: 100;
   width: 100%;
   padding-left: 20%;
+  transition: 0.3s;
 }
-
 
 .content h1 {
   color: black;
-  font-size: 4rem; 
-  border-bottom: 3px solid black;
+  font-size: 4rem;
   font-weight: 200;
-  
 }
 
-.menu p{
+.menu p {
   color: rgb(29, 29, 29);
-  font-size: 1.9rem; 
+  font-size: 1.9rem;
 }
 
-.items{
+.line {
+  background-color: black;
+  height: 2px;
+  margin-top: -32px;
+  transition: all 1.3s ease-in-out;
+}
+
+.items {
   color: rgb(29, 29, 29);
   font-size: 1.9rem;
   text-decoration: none;
   cursor: pointer;
 }
 
-.items:hover{
-opacity: 0.5;
+.items:hover {
+  font-weight: 500;
+  transition: width 500ms;
+  text-decoration: underline;
 }
-
 
 .container {
   height: 95%;
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
-  justify-content : space-between;
+  justify-content: space-between;
   margin: 8px;
 }
-.boxi{
-  padding: 15px;
+.boxi {
+  padding: 20px;
+  height: 60px;
+  width: 60px;
+  margin-right: 5%;
+}
 
+/* .fa {
+  font-size: 2.5rem;
+  cursor: pointer;
 }
-.fa{
-  font-size: 2rem;
-}
+
 .fa:hover {
-color: #FF7396;
+  color: #ff7396;
+  text-shadow: 0 0 5px red, 0 0 45px red, 0 0 90px red;
+} */
+@media only screen and (max-width: 600px) {
+  .boxi {
+    margin-right: 20%;
+  }
+  .container {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
-
