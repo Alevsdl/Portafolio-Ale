@@ -1,25 +1,21 @@
 import styles from '@/styles/pro.module.css'
 import styles2 from '@/styles/Home.module.css'
 import { useGradient } from '@/hooks/useGradient';
-import picp1 from '@/images/pp1.png'
-import picp2 from '@/images/pp2.png'
+import picp3 from '@/images/pp3.jpg'
+import picp4 from '@/images/pp4.png'
 import Menu from '@/components/Menu';
 import { useState } from 'react';
 import HeartIcon from '@/components/HeartIcon';
 import Card from '@/components/proyectos/p1';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft } from 'react-icons/fa';
 import Link from 'next/link';
 
-export default function Projects() {
+export default function Projects2() {
     const [showMenu, setShowMenu] = useState(false);
     const [showText, setShowText] = useState(true);
-    const [showPage2, setShowPage2] = useState(false);
     const handleMenuClick = () => {
         setShowMenu(!showMenu);
         setShowText(!showText);
-    };
-    const handlePage2Click = () => {
-        setShowMenu(!showPage2);
     };
     const [mouseXpercentage, mouseYpercentage] = useGradient();
 
@@ -33,7 +29,7 @@ export default function Projects() {
                 <div className={styles.con}>
                     <div className={styles2.boxi} onClick={handleMenuClick}> <HeartIcon />
                         <div className={styles.items}>
-                            <Link href="/projects2"><FaArrowRight /></Link>
+                            <Link href="/projects"><FaArrowLeft /></Link>
                         </div></div>
                     {showMenu && (
                         <Menu />
@@ -46,32 +42,27 @@ export default function Projects() {
                         <div className={styles.columnas}>
                             <div className={styles.c1}>
                                 <Card
-                                    title="Assist"
-                                    description="Pagina web para llevar asistencias academicas."
+                                    title="Savings Vault"
+                                    description="Pagina web para llevar presupuestos"
                                     rol="Rol: desarrollo frontend"
                                     proceso=" Mi
                                     trabajo en el proyecto fue desarrollar y diseñar toda la parte
                                     visual de la página web, asegurándome de que cada vista
                                     cumpliera con los requisitos de cohesión, simplicidad y uso
                                     responsivo en todos los dispositivos"
-                                    img={picp1}
-                                    link="https://www.ejemplo.com"
+                                    img={picp3}
+                                    link="https://github.com/Alevsdl/alcancia-web"
                                 />
 
                             </div>
                             <div className={styles.c2}>
                                 <Card
-                                    title="HACKFEST 2022"
-                                    description="página web informativa sobre uno de los objetivos de desarrollo
-                                    sostenible: Producción y consumo responsable. "
-                                    rol="Rol: desarrollo frontend"
-                                    proceso="Al ser una competencia permitió tener cierta libertad en los
-                                    aspectos técnicos y creativos del diseño. Esto se convirtió en un
-                                    proceso de desarrollo y diseño muy interesante, donde se
-                                    pudieron aplicar tecnologías y metodologías que no había
-                                    utilizado previamente."
-                                    img={picp2}
-                                    link="https://www.ejemplo.com"
+                                    title="Flights Data"
+                                    description="Aplicación para analizar datos de vuelos de aereolíneas "
+                                    rol="Rol: desarrollo backend frontend"
+                                    proceso="Aplicación en pyhton de analísis de datos de vuelos en tiempo real"
+                                    img={picp4}
+                                    link="https://github.com/Alevsdl/FlightsData"
                                 />
                             </div>
 

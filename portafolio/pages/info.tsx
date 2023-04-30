@@ -23,6 +23,7 @@ export default function Info() {
         <div className={styles.fullheight}>
             <div className={styles.marco}>
                 <div className={styles2.radialGradient} style={backgroundStyle}> </div>
+                <div className={styles.direction}><p>/info</p></div>
                 <div className={styles.con}>
                     <div className={styles2.boxi} onClick={handleMenuClick}> <HeartIcon /></div>
                     {showMenu && (
@@ -32,12 +33,12 @@ export default function Info() {
                     <div className={styles.container} style={{ display: showText ? "block" : "none" }}>
                         <div className={styles.columnas}>
                             <div className={styles.primera}>
-                                <div><p>/info</p></div>
                                 <div className={styles.fondo}>
                                     <Image src={pic} alt="selfie" className={styles.foto} height={300} />
+                                    <p>Alejandra Santos</p>
                                     {/* <div className={styles.fondoPerfil}></div> */}
                                     <div className={styles.socials}>
-                                        <FaAt className={styles.icon} />
+                                        <a href='mailto:alejandravsdl@gmail.com'><FaAt className={styles.icon} /></a>
                                         <FaGithub className={styles.icon} />
                                         <FaLinkedin className={styles.icon} />
 
@@ -45,8 +46,7 @@ export default function Info() {
                                 </div>
 
                             </div>
-                            <div>
-                                <h1>Alejandra Santos</h1>
+                            <div className={styles.des}>
                                 <p>Currently I’m a software engineer student in Guatemala.</p>
                                 <p>I believe in the creativity involved in designing and programming. I enjoy experimenting and relish the challenges that come with being a developer.</p>
                             </div>

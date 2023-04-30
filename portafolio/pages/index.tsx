@@ -29,7 +29,7 @@ export default function Home() {
   const [mouseXpercentage, mouseYpercentage] = useGradient();
 
   const backgroundStyle = {
-    background: `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, #d8bfd8, #FCFBF5)`,
+    background: `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, #EBDEFC, #FCFBF5)`,
   };
 
   return (
