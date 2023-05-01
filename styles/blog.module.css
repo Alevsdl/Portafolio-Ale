@@ -83,18 +83,49 @@
 }
 .contenido {
   height: 100%;
-  width: 100%;
+  width: 98%;
   text-align: justify;
+  /* From https://css.glass */
+  background: rgba(165, 88, 135, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.3px);
+  -webkit-backdrop-filter: blur(9.3px);
+  border: 1px solid rgba(165, 88, 135, 0.98);
 }
 .contenido h1 {
   color: black;
   font-size: 2rem;
   font-weight: 600;
+  text-decoration: none;
+}
+.individual {
+  height: 100%;
+  width: 99%;
+  padding: 10px;
+  text-align: justify;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(9.3px);
+  -webkit-backdrop-filter: blur(9.3px);
 }
 .contenido p {
   color: black;
   font-size: 1.3rem;
   font-weight: 400;
+}
+.titulos {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #706f6d;
+}
+.titulos:hover {
+  opacity: 0.5;
+}
+.flechita {
+  color: #a55887;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 @media only screen and (max-width: 600px) {
   .con {
@@ -116,5 +147,11 @@
   }
   .container {
     margin-top: 50px;
+  }
+  .individual {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    text-align: justify;
   }
 }

@@ -7,8 +7,9 @@ import pic from '@/images/222.png'
 import { useGradient } from '@/hooks/useGradient';
 import Menu from '@/components/Menu';
 import { useState } from 'react';
-import { FaGithub, FaAt, FaLinkedin } from 'react-icons/fa';
 import HeartIcon from '@/components/HeartIcon';
+import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa';
 interface Post {
     id: number;
     attributes: {
@@ -74,21 +75,21 @@ export default function Blog(props: Props) {
                                     <Image src={pic} alt="selfie" className={styles.foto} height={865} width={865} />
                                 </div>
                             </div>
-                            <div className={styles.contenido}>
+                            <div className={styles.contenido} >
                                 {posts.map(post => (
-                                    <h1 key={post.id}>{post.attributes.Titulo}</h1>
-                                ))}
-                                {posts.map(post => (
-                                    <p key={post.id}>{post.attributes.content}</p>
+
+                                    <h1 key={post.id} >
+                                        <FaArrowRight className={styles.flechita} />
+                                        <Link href={`/posts/${post.id}`} className={styles.titulos}>{post.attributes.Titulo} </Link>
+                                    </h1>
                                 ))}
                             </div>
                         </div>
-
                     </div>
 
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
