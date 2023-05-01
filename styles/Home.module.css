@@ -99,6 +99,9 @@
   width: 60px;
   margin-right: 5%;
 }
+.box p {
+  color: #706f6d;
+}
 
 /* .fa {
   font-size: 2.5rem;

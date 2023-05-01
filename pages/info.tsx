@@ -17,7 +17,7 @@ export default function Info() {
     const [mouseXpercentage, mouseYpercentage] = useGradient();
 
     const backgroundStyle = {
-        background: `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, #d8bfd8, #FCFBF5)`,
+        background: `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, #CFFFFF, #FCFBF5)`,
     };
     return (
         <div className={styles.fullheight}>

@@ -32,7 +32,7 @@ export default function Projects() {
                 <div className={styles2.radialGradient} style={backgroundStyle}> </div>
                 <div className={styles.con}>
                     <div className={styles2.boxi} onClick={handleMenuClick}> <HeartIcon />
-                        <div className={styles.items}>
+                        <div className={styles.items} style={{ display: showText ? "block" : "none" }}>
                             <Link href="/projects2"><FaArrowRight /></Link>
                         </div></div>
                     {showMenu && (
@@ -82,7 +82,7 @@ export default function Projects() {
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 
 }

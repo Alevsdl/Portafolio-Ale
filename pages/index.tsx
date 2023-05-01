@@ -29,7 +29,7 @@ export default function Home() {
   const [mouseXpercentage, mouseYpercentage] = useGradient();
 
   const backgroundStyle = {
-    background: `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, #EBDEFC, #FCFBF5)`,
+    background: `radial-gradient(at ${mouseXpercentage}% ${mouseYpercentage}%, #84ACF3, #FCFBF5)`,
   };
 
   return (
@@ -45,6 +45,7 @@ export default function Home() {
             <div className={styles.box}>
               <h1>HI IM ALE</h1>
               <div className={styles.line} style={{ width: showLine ? "100%" : "0px" }} />
+              <p>Developer Porfolio</p>
             </div>
             {/* <div className={styles.box}><p>Developer porfolio</p></div> */}
           </div>
