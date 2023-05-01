@@ -23,7 +23,7 @@ export default function Info() {
         <div className={styles.fullheight}>
             <div className={styles.marco}>
                 <div className={styles2.radialGradient} style={backgroundStyle}> </div>
-                <div className={styles.direction}><p>/info</p></div>
+
                 <div className={styles.con}>
                     <div className={styles2.boxi} onClick={handleMenuClick}> <HeartIcon /></div>
                     {showMenu && (
@@ -33,6 +33,7 @@ export default function Info() {
                     <div className={styles.container} style={{ display: showText ? "block" : "none" }}>
                         <div className={styles.columnas}>
                             <div className={styles.primera}>
+                                <div className={styles.direction}><p>/info</p></div>
                                 <div className={styles.fondo}>
                                     <Image src={pic} alt="selfie" className={styles.foto} height={300} />
                                     <p>Alejandra Santos</p>

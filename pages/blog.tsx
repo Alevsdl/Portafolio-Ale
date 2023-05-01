@@ -75,15 +75,16 @@ export default function Blog(props: Props) {
                                     <Image src={pic} alt="selfie" className={styles.foto} height={865} width={865} />
                                 </div>
                             </div>
-                            <div className={styles.contenido} >
-                                {posts.map(post => (
 
-                                    <h1 key={post.id} >
+                            {posts.map(post => (
+                                <div key={post.id} className={styles.contenido} >
+                                    <h1  >
                                         <FaArrowRight className={styles.flechita} />
                                         <Link href={`/posts/${post.id}`} className={styles.titulos}>{post.attributes.Titulo} </Link>
                                     </h1>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
+
                         </div>
                     </div>
 

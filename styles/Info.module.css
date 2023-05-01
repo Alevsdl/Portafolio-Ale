@@ -107,8 +107,8 @@
 
 .primera div:nth-child(1) {
   justify-self: start;
-  padding-left: 5%;
   padding-bottom: 30px;
+  padding-left: 5%;
   font-size: 2.5rem;
   color: #706f6d;
 }
@@ -132,9 +132,17 @@
   }
   .fondo {
     width: 100%;
-    height: 160px;
+    height: 260px;
     min-width: 10px;
+    padding: 0;
+    margin: 0;
   }
+  .marco {
+    /*border: 2px solid black;*/
+    width: calc(100% - 0px);
+    height: calc(100% - 0px);
+  }
+
   .foto {
     height: 100px;
     width: 100px;
@@ -155,5 +163,9 @@
     height: 95%;
     width: 80%;
     flex-direction: column;
+  }
+  .icon {
+    font-size: 2rem;
+    color: #333;
   }
 }
